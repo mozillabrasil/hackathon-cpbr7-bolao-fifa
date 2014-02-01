@@ -1,5 +1,4 @@
 <!doctype html>
-<html lang="en">
 <script type="text/javascript">
 function valida(form) { 
     if (form.name.value=="") {
@@ -30,52 +29,61 @@ function valida(form) {
     }   
 }
 </script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+    <title>Bolão de Apostas Fifa World Cup 2014</title>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastrar Usuário</title>
-</head>
+    <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/signin.css" rel="stylesheet">
+  </head>
 
-<header>
-  <img src="logo.jpg" class="logo">
-</header>
+   <header>
+   <img Width="50%" height="180px" src="imagens/logo.jpg"></img>
+  </header>
 
-<body>
-    <h2>Cadastro de Usuário</h3>
-    <form name="form" class="rounded" method="post" action="cadusu.php" onSubmit="return valida(this);">
+  <body>
+    <div class="container">
+    <h2 align="center">Cadastro de Usuário</h3>
+    <form name="form" method="post" action="cadusu.php" onSubmit="return valida(this);">
         <div class="field">
-            <label for="name">Nome:</label>
-            <input type="text" class="input" name="name" id="name" />
-            <p class="hint" hidden>Digite o nome de usuário.</p>
+           <label>Nome:</label>
+           <input type="text" class="form-control" name="name" id="name" />
         </div>
 
         <div class="field">
             <label for="email">E-mail:</label>
-            <input type="text" class="input" name="email" id="email" />
+            <input type="text" class="form-control" name="email" id="email" />
             <p id="hint" hidden>Digite o e-mail do usuario.</p>
         </div>
 
         <div class="field">
             <label for="senha">Senha:</label>
-            <input type="password" class="input" name="senha" id="senha" />
+            <input type="password" class="form-control" name="senha" id="senha" />
             <p class="hint" hidden>Digite a senha para o usuário.</p>
         </div>
 
         <div class="field">
             <label for="senha">Repita a Senha:</label>
-            <input type="password" class="input" name="senha2" id="senha2" />
+            <input type="password" class="form-control" name="senha2" id="senha2" />
             <p class="hint" hidden>Digite a senha para o usuário.</p>
         </div>
 
         <div class="field">
             <label for="name">Data de Nascimento:</label>
-            <input type="date" class="input" name="dtnasc" id="dtnasc" />
+            <input type="date" class="form-control" name="dtnasc" id="dtnasc" />
             <p class="hint" hidden>Digite sua data de nascimento.</p>
         </div>
 
         <div class="field">
             <label for="name">Seleção:</label>
-            <select class="input" name="selecao" id="selecao">
+            <select class="form-control" name="selecao" id="selecao">
               <option value="-1"> Selecione... </option>
               <option value="Alemanha">Alemanha</option>
               <option value="Argélia">Argélia</option>
@@ -115,7 +123,7 @@ function valida(form) {
 
         <div class="field">
             <label for="name">Time:</label>
-            <select class="input" name="times" id="times">      
+            <select class="form-control" name="times" id="times">      
             <option value="-1"> Selecione... </option>
             <option value="América (MG)">  América (MG) </option>
             <option value="América (RJ)">  América (RJ) </option>
@@ -170,8 +178,10 @@ function valida(form) {
             </select>
             <p class="hint" hidden>Escolha seu Time</p>
         </div>
-        <input type="submit" value="Confirmar"></input>
-        <input type="reset" value="Cancelar"></input>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Confirmar</button>
+        </form><br>
+        <button class="btn btn-lg btn-primary btn-block" onClick="location.href='logout.php'">Cancelar</button>
     </form>
 </body>
 </html>
