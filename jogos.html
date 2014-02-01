@@ -1,0 +1,134 @@
+<html>
+  <head>
+        <meta charset="UTF-8" >
+        <title>Selecionar Jogo</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/signin.css" rel="stylesheet">
+
+  </head>
+
+  <header>
+         <img Width="50%" height="180px" src="imagens/logo.jpg"></img> <br><br>
+  </header>
+
+  <body>
+  <div class="container">
+    <h1 align="center"> Selecione o Jogo </h1>
+       <form name='selecionar_Jogo' action="selecionar_Jogo.php" method="post">
+        	<label>Seleção Mandante:</label>
+              <select class="form-control" name="selecao" id="selecao">
+              <option value="">Selecione...</option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Argélia">Argélia</option>
+              <option value="Argentina">  Argentina</option>
+              <option value="Austrália">  Austrália</option>
+              <option value="Bélgica">  Bélgica</option>
+              <option value="Bósnia">  Bósnia</option>
+              <option value="Brasil">  Brasil</option>
+              <option value="Camarões">  Camarões</option>
+              <option value="Chile">  Chile</option>
+              <option value="Colômbia">  Colômbia</option>
+              <option value="Coréia do Sul">  Coréia do Sul</option>
+              <option value="Costa do Marfim">  Costa do Marfim</option>
+              <option value="Costa Rica">  Costa Rica</option>
+              <option value="Cróacia">  Croácia</option>
+              <option value="Equador">  Equador</option>
+              <option value="Espanha">  Espanha</option>
+              <option value="Estados Unidos">  Estados Unidos</option>
+              <option value="França">  França</option>
+              <option value="Gana">  Gana</option>
+              <option value="Grécia">  Grécia</option>
+              <option value="Holanda">  Holanda</option>
+              <option value="Honduras">  Honduras</option>
+              <option value="Inglaterra">  Inglaterra</option>
+              <option value="Irã">  Irã</option>
+              <option value="Itália">  Itália</option>
+              <option value="Japão">  Japão</option>
+              <option value="México">  México</option>
+              <option value="Nigéria">  Nigéria</option>
+              <option value="Portugal">  Portugal</option>
+              <option value="Rússia">  Rússia</option>
+              <option value="Suiça">  Suiça</option>
+              <option value="Uruguai">  Uruguai</option>
+    		</select>
+        <label>Seleção Visitante:</label>
+              <select class="form-control" name="selecao2" id="selecao2">
+              <option value="">Selecione...</option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Argélia">Argélia</option>
+              <option value="Argentina">  Argentina</option>
+              <option value="Austrália">  Austrália</option>
+              <option value="Bélgica">  Bélgica</option>
+              <option value="Bósnia">  Bósnia</option>
+              <option value="Brasil">  Brasil</option>
+              <option value="Camarões">  Camarões</option>
+              <option value="Chile">  Chile</option>
+              <option value="Colômbia">  Colômbia</option>
+              <option value="Coréia do Sul">  Coréia do Sul</option>
+              <option value="Costa do Marfim">  Costa do Marfim</option>
+              <option value="Costa Rica">  Costa Rica</option>
+              <option value="Cróacia">  Croácia</option>
+              <option value="Equador">  Equador</option>
+              <option value="Espanha">  Espanha</option>
+              <option value="Estados Unidos">  Estados Unidos</option>
+              <option value="França">  França</option>
+              <option value="Gana">  Gana</option>
+              <option value="Grécia">  Grécia</option>
+              <option value="Holanda">  Holanda</option>
+              <option value="Honduras">  Honduras</option>
+              <option value="Inglaterra">  Inglaterra</option>
+              <option value="Irã">  Irã</option>
+              <option value="Itália">  Itália</option>
+              <option value="Japão">  Japão</option>
+              <option value="México">  México</option>
+              <option value="Nigéria">  Nigéria</option>
+              <option value="Portugal">  Portugal</option>
+              <option value="Rússia">  Rússia</option>
+              <option value="Suiça">  Suiça</option>
+              <option value="Uruguai">  Uruguai</option>
+        </select>
+            <label>Local:</label> 
+    		  	<select class="form-control" name="local">
+                    <option value="">Selecione...</option>
+                    <option value="Belo Horizonte">Belo Horizonte / Mineirão </option>
+                    <option value="Brasilia">Brasilia / Mané Garrincha </option>
+                    <option value="Cuiabá">Cuiabá / Arena Pantanal </option>
+                    <option value="Curitiba">Curitiba / Arena da Baixada </option>
+                    <option value="Fortaleza"> Fortaleza / Castelão </option>
+                    <option value="Manaus"> Manaus /  xx</option>
+                    <option value="Natal"> Natal / Arena das Dunas</option>
+                    <option value="Porto Alegre"> Porto Alegre / Beira Rio </option>
+                    <option value="Recife"> Recife / Arena Pernambuco</option>
+                    <option value="Rio de Janeiro"> Rio de Janeiro / Maracanã </option>
+                    <option value="Salvador"> Salvador / Fonte Nova</option>
+                    <option value="São Paulo"> São Paulo / Arena São Paulo </option>
+                </select>
+            <label>Fase:</label>
+                <select class="form-control" name="fase">
+                    <option value="">Selecione...</option>
+                    <option value="1"> 1º Fase </option>
+                    <option value="2"> Oitavas de Final </option>
+                    <option value="3"> Quartas de Final </option>
+                    <option value="4"> Semi Final </option>
+                    <option value="5"> Final </option>
+                </select>
+            <label>Grupo:</label>
+            <select class="form-control" name="grupo">
+                    <option value="">Selecione...</option>
+                    <option value="A"> A </option>
+                    <option value="B"> B </option>
+                    <option value="C"> C </option>
+                    <option value="D"> D </option>
+                    <option value="E"> E </option>
+                    <option value="F"> F </option>
+                    <option value="G"> G </option>
+                    <option value="H"> H </option>
+                </select>
+
+    		<br>       
+    		<button type="submit" name="Enviar" class="btn btn-lg btn-primary btn-block">Enviar</button>
+        </form>
+             <button class="btn btn-lg btn btn-block" name="Voltar" onClick="location.href='logado.html'" >Voltar</button>
+    </div>
+  </body>
+</html>

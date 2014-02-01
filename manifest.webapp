@@ -1,0 +1,13 @@
+{
+
+"name": "Bolão Fifa WorldCup 2014",
+"version": "1.1",
+"description": "Um aplicativo para apostas nos jogos da copa do mundo fifa 2014",
+"launch_path": "/index.html",
+"icons": { "128": "/img/icon-128.png" },
+"developer": {
+"name": "Ramon Gonçalves",
+"url": "http://sua-pagina-aqui.org"
+}
+}
+

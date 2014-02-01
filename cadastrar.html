@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<script type="text/javascript">
+function valida(form) { 
+    if (form.name.value=="") {
+        alert("Preencha o nome corretamente.");
+        form.name.focus();
+        return false;
+    }
+    if (form.senha.value=="") {
+     alert("Preencha o Senha corretamente.");
+        form.senha.focus();
+     return false;
+    }
+    if (form.selecao.value=="") {
+     alert("Preencha a sua Seleção corretamente.");
+     form.senha.focus();
+     return false;
+    }
+    if (form.times.value=="") {
+        alert("Preencha o seu time Corretamente.");
+        form.senha.focus();
+        return false;
+    }
+    var filtro_mail = /^.+@.+\..{2,3}$/
+    if (!filtro_mail.test(form.email.value) || form.email.value=="") {
+        alert("Preencha o e-mail corretamente.");
+        form.email.focus();
+        return false;
+    }   
+}
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Usuário</title>
+</head>
+
+<header>
+  <img src="logo.jpg" class="logo">
+</header>
+
+<body>
+    <h2>Cadastro de Usuário</h3>
+    <form name="form" class="rounded" method="post" action="cadusu.php" onSubmit="return valida(this);">
+        <div class="field">
+            <label for="name">Nome:</label>
+            <input type="text" class="input" name="name" id="name" />
+            <p class="hint" hidden>Digite o nome de usuário.</p>
+        </div>
+
+        <div class="field">
+            <label for="email">E-mail:</label>
+            <input type="text" class="input" name="email" id="email" />
+            <p id="hint" hidden>Digite o e-mail do usuario.</p>
+        </div>
+
+        <div class="field">
+            <label for="senha">Senha:</label>
+            <input type="password" class="input" name="senha" id="senha" />
+            <p class="hint" hidden>Digite a senha para o usuário.</p>
+        </div>
+
+        <div class="field">
+            <label for="senha">Repita a Senha:</label>
+            <input type="password" class="input" name="senha2" id="senha2" />
+            <p class="hint" hidden>Digite a senha para o usuário.</p>
+        </div>
+
+        <div class="field">
+            <label for="name">Data de Nascimento:</label>
+            <input type="date" class="input" name="dtnasc" id="dtnasc" />
+            <p class="hint" hidden>Digite sua data de nascimento.</p>
+        </div>
+
+        <div class="field">
+            <label for="name">Seleção:</label>
+            <select class="input" name="selecao" id="selecao">
+              <option value="-1"> Selecione... </option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Argélia">Argélia</option>
+              <option value="Argentina">  Argentina</option>
+              <option value="Austrália">  Austrália</option>
+              <option value="Bélgica">  Bélgica</option>
+              <option value="Bósnia">  Bósnia</option>
+              <option value="Brasil">  Brasil</option>
+              <option value="Camarões">  Camarões</option>
+              <option value="Chile">  Chile</option>
+              <option value="Colômbia">  Colômbia</option>
+              <option value="Coréia do Sul">  Coréia do Sul</option>
+              <option value="Costa do Marfim">  Costa do Marfim</option>
+              <option value="Costa Rica">  Costa Rica</option>
+              <option value="Cróacia">  Croácia</option>
+              <option value="Equador">  Equador</option>
+              <option value="Espanha">  Espanha</option>
+              <option value="Estados Unidos">  Estados Unidos</option>
+              <option value="França">  França</option>
+              <option value="Gana">  Gana</option>
+              <option value="Grécia">  Grécia</option>
+              <option value="Holanda">  Holanda</option>
+              <option value="Honduras">  Honduras</option>
+              <option value="Inglaterra">  Inglaterra</option>
+              <option value="Irã">  Irã</option>
+              <option value="Itália">  Itália</option>
+              <option value="Japão">  Japão</option>
+              <option value="México">  México</option>
+              <option value="Nigéria">  Nigéria</option>
+              <option value="Portugal">  Portugal</option>
+              <option value="Rússia">  Rússia</option>
+              <option value="Suiça">  Suiça</option>
+              <option value="Uruguai">  Uruguai</option>
+            </select>
+            <p class="hint" hidden>Escolha sua Seleção</p>
+        </div>
+
+        <div class="field">
+            <label for="name">Time:</label>
+            <select class="input" name="times" id="times">      
+            <option value="-1"> Selecione... </option>
+            <option value="América (MG)">  América (MG) </option>
+            <option value="América (RJ)">  América (RJ) </option>
+            <option value="América (RN)">    América (RN) </option>
+            <option value="Americano (RJ)">    Americano (RJ) </option>
+            <option value="Anapolina (GO)">    Anapolina (GO) </option>
+            <option value="Atlético (MG)">    Atlético (MG) </option>
+            <option value="Atlético (PR)">    Atlético (PR) </option>
+            <option value="Avaí (SC)">    Avaí (SC) </option>
+            <option value="Bahia (BA)">    Bahia (BA) </option>
+            <option value="Bangu (RJ)">    Bangu (RJ) </option>
+            <option value="Botafogo (RJ)">    Botafogo (RJ) </option>
+            <option value="Botafogo (SP) "> Botafogo (SP) </option>
+            <option value="Bragantino (SP) "> Bragantino (SP) </option>
+            <option value="Caxias (RS) "> Caxias (RS) </option>
+            <option value="Ceará (CE) ">Ceará (CE) </option>
+            <option value="Corinthians (SP)"> Corinthians (SP)</option>
+            <option value="Coritiba (PR) "> Coritiba (PR) </option>
+            <option value="CRB (AL) "> CRB (AL) </option>
+            <option value="Criciuma (SC) "> Criciuma (SC) </option>
+            <option value="Cruzeiro (MG) "> Cruzeiro (MG) </option>
+            <option value="CSA (AL) "> CSA (AL) </option>
+            <option value="Desportiva (ES) "> Desportiva (ES) </option>
+            <option value="Figueirense (SC) "> Figueirense (SC) </option>
+            <option value="Flamengo (RJ)"> Flamengo (RJ)</option>
+            <option value="Fluminense (RJ) "> Fluminense (RJ) </option>
+            <option value="Fortaleza (CE) "> Fortaleza (CE) </option>
+            <option value="Goiás (GO) "> Goiás (GO) </option>
+            <option value="Grêmio (RS)"> Grêmio (RS)</option>
+            <option value="Guarani (SP)"> Guarani (SP)</option>
+            <option value="Internacional (RS)"> Internacional (RS)</option>
+            <option value="Joinville (SC) "> Joinville (SC) </option>
+            <option value="Juventude (RS) "> Juventude (RS) </option>
+            <option value="Juventus (SP) "> Juventus (SP) </option>
+            <option value="Londrina (PR) "> Londrina (PR) </option>
+            <option value="Náutico (PE) "> Náutico (PE) </option>
+            <option value="Operário (MS) "> Operário (MS) </option>
+            <option value="Palmeiras (SP) "> Palmeiras (SP) </option>
+            <option value="Paraná Clube (PR) ">Paraná Clube (PR) </option>
+            <option value="Paysandu (PA) "> Paysandu (PA) </option>
+            <option value="Ponte Preta (SP) "> Ponte Preta (SP) </option>
+            <option value="Portuguesa Desp. (SP) "> Portuguesa Desp. (SP) </option>
+            <option value="Remo (PA) "> Remo (PA) </option>
+            <option value="Santa Cruz (PE) "> Santa Cruz (PE) </option>
+            <option value="Santos (SP) ">Santos (SP) </option>
+            <option value="São Paulo (SP)">São Paulo (SP)</option>
+            <option value="Sport (PE) "> Sport (PE) </option>
+            <option value="Tuna Luso (PA)">Tuna Luso (PA)</option>
+            <option value="Vasco (RJ) "> Vasco (RJ) </option>
+            <option value="Vila Nova (GO)"> Vila Nova (GO) </option>
+            <option value="Vitória (BA) "> Vitória (BA) </option>
+            </select>
+            <p class="hint" hidden>Escolha seu Time</p>
+        </div>
+        <input type="submit" value="Confirmar"></input>
+        <input type="reset" value="Cancelar"></input>
+    </form>
+</body>
+</html>
